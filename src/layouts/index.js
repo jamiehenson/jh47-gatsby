@@ -1,61 +1,74 @@
 import React from "react"
-import PropTypes from "prop-types"
 import Link from "gatsby-link"
-import Helmet from "react-helmet"
-import { rhythm } from "../utils/typography"
+import { Container } from "react-responsive-grid"
 
-export default class Template extends React.Component {
-  static propTypes = {
-    children: PropTypes.func,
-  }
+import { rhythm, scale } from "../utils/typography"
 
+class Template extends React.Component {
   render() {
-    return (
-      <div>
-        <Helmet
-          title="Gatsby Default Starter"
-          meta={[
-            { name: "description", content: "Sample" },
-            { name: "keywords", content: "sample, something" },
-          ]}
-        />
-        <div
+    const { location, children } = this.props
+    let header
+    if (location.pathname === "/") {
+      header = (
+        <h1
           style={{
-            background: `rebeccapurple`,
-            marginBottom: rhythm(1),
+            ...scale(1.5),
+            marginBottom: rhythm(1.5),
+            marginTop: 0,
           }}
         >
-          <div
+          <Link
             style={{
-              margin: `0 auto`,
-              maxWidth: 960,
-              padding: `${rhythm(1)} ${rhythm(3 / 4)}`,
+              boxShadow: "none",
+              textDecoration: "none",
+              color: "inherit",
             }}
+            to={"/"}
           >
-            <h1 style={{ margin: 0 }}>
-              <Link
-                to="/"
-                style={{
-                  color: "white",
-                  textDecoration: "none",
-                }}
-              >
-                Gatsby
-              </Link>
-            </h1>
-          </div>
-        </div>
-        <div
+            Jamie Henson
+          </Link>
+        </h1>
+      )
+    } else {
+      header = (
+        <h3
           style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            padding: `${rhythm(1)} ${rhythm(3 / 4)}`,
-            paddingTop: 0,
+            fontFamily: "Montserrat, sans-serif",
+            marginTop: 0,
+            marginBottom: rhythm(-1),
           }}
         >
-          {this.props.children()}
-        </div>
-      </div>
+          <Link
+            style={{
+              boxShadow: "none",
+              textDecoration: "none",
+              color: "inherit",
+            }}
+            to={"/"}
+          >
+            Jamie Henson
+          </Link>
+        </h3>
+      )
+    }
+    return (
+      <Container
+        style={{
+          maxWidth: rhythm(24),
+          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+        }}
+      >
+        {header}
+        {children()}
+      </Container>
     )
   }
 }
+
+Template.propTypes = {
+  children: React.PropTypes.function,
+  location: React.PropTypes.object,
+  route: React.PropTypes.object,
+}
+
+export default Template

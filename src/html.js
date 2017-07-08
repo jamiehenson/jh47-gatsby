@@ -1,27 +1,27 @@
 import React from "react"
-import PropTypes from "prop-types"
+import { TypographyStyle } from "react-typography"
 import Helmet from "react-helmet"
 
-import { TypographyStyle } from "react-typography"
 import typography from "./utils/typography"
 
-const BUILD_TIME = new Date().getTime()
+let stylesStr
+if (process.env.NODE_ENV === `production`) {
+  try {
+    stylesStr = require(`!raw-loader!../public/styles.css`)
+  } catch (e) {
+    console.log(e)
+  }
+}
 
 export default class HTML extends React.Component {
-  static propTypes = {
-    body: PropTypes.string,
-  }
-
   render() {
     const head = Helmet.rewind()
-
     let css
-    if (process.env.NODE_ENV === "production") {
+    if (process.env.NODE_ENV === `production`) {
       css = (
         <style
-          dangerouslySetInnerHTML={{
-            __html: require("!raw!../public/styles.css"),
-          }}
+          id="gatsby-inlined-css"
+          dangerouslySetInnerHTML={{ __html: stylesStr }}
         />
       )
     }
