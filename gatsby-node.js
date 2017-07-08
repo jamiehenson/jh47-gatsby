@@ -12,19 +12,19 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
     const blogPost = path.resolve("./src/templates/blog-post.js")
     resolve(
       graphql(
-        `
-      {
-        allMarkdownRemark(limit: 1000) {
-          edges {
-            node {
-              frontmatter {
-                path
+      `
+        {
+          allMarkdownRemark(limit: 1000, sort: {fields: [frontmatter___date], order: DESC}) {
+            edges {
+              node {
+                frontmatter {
+                  path
+                }
               }
             }
           }
         }
-      }
-    `
+      `
       ).then(result => {
         if (result.errors) {
           console.log(result.errors)
