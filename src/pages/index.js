@@ -20,7 +20,7 @@ class BlogIndex extends React.Component {
   render() {
     const pageLinks = [];
     const siteTitle = get(this, "props.data.site.siteMetadata.title");
-    get(this, "props.data.allMarkdownRemark.edges").reverse().forEach(post => {
+    get(this, "props.data.allMarkdownRemark.edges").forEach(post => {
       if (post.node.path !== "/404/") {
         const title = get(post, "node.frontmatter.title") || post.node.path;
         pageLinks.push(
@@ -58,7 +58,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
           frontmatter {
