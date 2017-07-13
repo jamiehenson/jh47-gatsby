@@ -2,6 +2,9 @@ import React from "react";
 import Helmet from "react-helmet";
 import Link from "gatsby-link";
 import get from "lodash/get";
+import styled from "styled-components";
+
+const StyledBody = styled.div`line-height: 1.4;`;
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -17,7 +20,7 @@ class BlogPostTemplate extends React.Component {
         <p>
           {post.frontmatter.date}
         </p>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <StyledBody dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
     );
   }

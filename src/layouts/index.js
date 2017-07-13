@@ -2,9 +2,11 @@ import React from "react";
 import Link from "gatsby-link";
 import { Container } from "react-responsive-grid";
 import styled from "styled-components";
+import "typeface-arvo";
+import "typeface-cabin";
 
 const StyledContainer = styled(Container)`
-  text-align: center;
+  font-family: "Arvo", sans-serif;
 `;
 
 const StyledLink = styled(Link)`

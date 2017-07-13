@@ -9,10 +9,11 @@ const StyledList = styled.ul`
   list-style: none;
   padding: 0;
   li {
-    margin-bottom: 0.5em;
+    padding: 0.5em 0;
   }
   a {
     color: white;
+    display: block;
   }
 `;
 
@@ -26,8 +27,12 @@ class BlogIndex extends React.Component {
         pageLinks.push(
           <li key={post.node.path}>
             <Link to={post.node.frontmatter.path}>
-              {post.node.frontmatter.title}:{" "}
-              {moment(post.node.frontmatter.date).format("MMMM Do YYYY")}
+              <span>
+                {post.node.frontmatter.title}
+              </span>
+              <span style={{ float: "right" }}>
+                {moment(post.node.frontmatter.date).format("MMMM Do YYYY")}
+              </span>
             </Link>
           </li>
         );
