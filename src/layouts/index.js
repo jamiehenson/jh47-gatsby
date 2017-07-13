@@ -4,6 +4,7 @@ import { Container } from "react-responsive-grid";
 import styled from "styled-components";
 import "typeface-arvo";
 import "typeface-cabin";
+import FontAwesome from "react-fontawesome";
 
 const StyledContainer = styled(Container)`
   font-family: "Arvo", sans-serif;
@@ -32,9 +33,19 @@ class Template extends React.Component {
         </h3>
       );
     }
+
+    const navLinks = (
+      <div>
+        <FontAwesome name="github" />
+        <h2>Full stack developer and multi-instrumentalist</h2>
+      </div>
+    );
+
     return (
       <StyledContainer>
         {header}
+        {navLinks}
+        <hr />
         {children()}
       </StyledContainer>
     );
