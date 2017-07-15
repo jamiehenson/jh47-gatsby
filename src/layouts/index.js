@@ -4,6 +4,7 @@ import { Container } from "react-responsive-grid";
 import styled from "styled-components";
 import "typeface-arvo";
 import "typeface-cabin";
+import "font-awesome/css/font-awesome.css";
 import FontAwesome from "react-fontawesome";
 
 const StyledContainer = styled(Container)`
@@ -15,6 +16,21 @@ const StyledLink = styled(Link)`
 `;
 
 const H1 = styled.h1`font-size: 3em;`;
+const Footer = styled.footer`
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 15px;
+  a {
+    display: inline-block;
+    margin: 0 10px;
+    color: rgba(255, 255, 255, 0.5);
+    transition: color 0.2s;
+    &:hover {
+      color: white;
+      transition: color 0.2s;
+    }
+  }
+`;
 
 class Template extends React.Component {
   render() {
@@ -34,19 +50,25 @@ class Template extends React.Component {
       );
     }
 
-    const navLinks = (
-      <div>
-        <FontAwesome name="github" />
-        <h2>Full stack developer and multi-instrumentalist</h2>
-      </div>
+    const footer = (
+      <Footer>
+        <a href="//github.com/jamiehenson" target="_blank">
+          <FontAwesome name="github" size="3x" />
+        </a>
+        <a href="//twitter.com/HensonJamie" target="_blank">
+          <FontAwesome name="twitter" size="3x" />
+        </a>
+        <a href="//instagram.com/jhenson47" target="_blank">
+          <FontAwesome name="instagram" size="3x" />
+        </a>
+      </Footer>
     );
 
     return (
       <StyledContainer>
         {header}
-        {navLinks}
-        <hr />
         {children()}
+        {footer}
       </StyledContainer>
     );
   }

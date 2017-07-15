@@ -1,5 +1,6 @@
 import React from "react";
 import Helmet from "react-helmet";
+import styled from "styled-components";
 
 let stylesStr;
 if (process.env.NODE_ENV === `production`) {
@@ -12,6 +13,11 @@ if (process.env.NODE_ENV === `production`) {
 
 export default class HTML extends React.Component {
   render() {
+    const StyledBody = styled.body`
+      background: rgb(91, 94, 166);
+      color: white;
+    `;
+
     const head = Helmet.rewind();
     let css;
     if (process.env.NODE_ENV === `production`) {
@@ -35,18 +41,13 @@ export default class HTML extends React.Component {
           {this.props.headComponents}
           {css}
         </head>
-        <body
-          style={{
-            background: "rgb(91, 94, 166)",
-            color: "white"
-          }}
-        >
+        <StyledBody>
           <div
             id="___gatsby"
             dangerouslySetInnerHTML={{ __html: this.props.body }}
           />
           {this.props.postBodyComponents}
-        </body>
+        </StyledBody>
       </html>
     );
   }
