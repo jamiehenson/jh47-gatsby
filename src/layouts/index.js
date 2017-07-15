@@ -62,7 +62,7 @@ class Template extends React.Component {
       );
     } else {
       header = (
-        <h2 style={{ "text-shadow": "0 0 3px black" }}>
+        <h2 style={{ textShadow: "0 0 3px black" }}>
           <StyledLink to={"/"}>Jamie Henson</StyledLink>
         </h2>
       );
