@@ -8,17 +8,9 @@ import "typeface-cabin";
 import "font-awesome/css/font-awesome.css";
 import FontAwesome from "react-fontawesome";
 
-const AppContainer = styled.div`
-  background: rgb(91, 94, 166);
-  color: white;
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-`;
-
 const StyledContainer = styled(Container)`
   font-family: "Arvo", sans-serif;
+  color: white;
 `;
 
 const StyledLink = styled(Link)`
@@ -83,13 +75,11 @@ class Template extends React.Component {
     );
 
     return (
-      <AppContainer>
-        <StyledContainer>
-          {header}
-          {children()}
-          {footer}
-        </StyledContainer>
-      </AppContainer>
+      <StyledContainer>
+        {header}
+        {children()}
+        {footer}
+      </StyledContainer>
     );
   }
 }

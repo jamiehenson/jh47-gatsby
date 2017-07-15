@@ -36,7 +36,7 @@ export default class HTML extends React.Component {
           {this.props.headComponents}
           {css}
         </head>
-        <body>
+        <body style={{ backgroundColor: "rgb(91, 94, 166)" }}>
           <div
             id="___gatsby"
             dangerouslySetInnerHTML={{ __html: this.props.body }}
