@@ -24,6 +24,9 @@ const H1 = styled.h1`
   a {
     text-decoration: none;
   }
+  @media (max-width: 767px) {
+    margin-top: 0;
+  }
 `;
 
 const Footer = styled.footer`
