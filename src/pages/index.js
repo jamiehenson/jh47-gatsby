@@ -162,7 +162,7 @@ class Index extends React.Component {
 
     const projects = (
       <ProjectWrapper>
-        <ProjectCell
+        {/* <ProjectCell
           href="/"
           onMouseEnter={this.changeProjectBlurb}
           onMouseLeave={this.removeProjectBlurb}
@@ -171,7 +171,7 @@ class Index extends React.Component {
           data-description="Style your page based upon the time of day, set time intervals and more!"
         >
           Moodlight.js
-        </ProjectCell>
+        </ProjectCell> */}
         <ProjectCell
           href="/laspring"
           onMouseEnter={this.changeProjectBlurb}
