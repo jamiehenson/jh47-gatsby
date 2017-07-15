@@ -1,0 +1,76 @@
+{
+  "assetsByChunkName": {
+    "commons": [
+      "commons-1d7dc39ceffa6ffa046f.js",
+      "commons-1d7dc39ceffa6ffa046f.js.map"
+    ],
+    "layout-component---index": [
+      "layout-component---index-d6c9982f73da1eb4b155.js",
+      "layout-component---index-d6c9982f73da1eb4b155.js.map"
+    ],
+    "page-component---src-templates-blog-post-js": [
+      "page-component---src-templates-blog-post-js-44b0ef61713eeecea831.js",
+      "page-component---src-templates-blog-post-js-44b0ef61713eeecea831.js.map"
+    ],
+    "page-component---src-pages-index-js": [
+      "page-component---src-pages-index-js-b6a6d6aca9c6ff762346.js",
+      "page-component---src-pages-index-js-b6a6d6aca9c6ff762346.js.map"
+    ],
+    "path---three-months": [
+      "path---three-months-9098bbf174dd0fb85664.js",
+      "path---three-months-9098bbf174dd0fb85664.js.map"
+    ],
+    "path---thong-song": [
+      "path---thong-song-6a4626eeea340f00bf96.js",
+      "path---thong-song-6a4626eeea340f00bf96.js.map"
+    ],
+    "path---streamers": [
+      "path---streamers-60ea8a35ceda0d3d1ffd.js",
+      "path---streamers-60ea8a35ceda0d3d1ffd.js.map"
+    ],
+    "path---offline-plugin-app-shell-fallback": [
+      "path---offline-plugin-app-shell-fallback-586c7e095e534a3909ec.js",
+      "path---offline-plugin-app-shell-fallback-586c7e095e534a3909ec.js.map"
+    ],
+    "path---london-vs-sf": [
+      "path---london-vs-sf-1d1c4ad5fcf3578c78ac.js",
+      "path---london-vs-sf-1d1c4ad5fcf3578c78ac.js.map"
+    ],
+    "path---land-of-the-free": [
+      "path---land-of-the-free-74324c8c0906492578ce.js",
+      "path---land-of-the-free-74324c8c0906492578ce.js.map"
+    ],
+    "path---index": [
+      "path---index-ab717525d3806529a052.js",
+      "path---index-ab717525d3806529a052.js.map"
+    ],
+    "path---halfway": [
+      "path---halfway-8771dce4ee0d255fe8ce.js",
+      "path---halfway-8771dce4ee0d255fe8ce.js.map"
+    ],
+    "path---freedom-for-wrists": [
+      "path---freedom-for-wrists-f5fdd594b4d9241dab3f.js",
+      "path---freedom-for-wrists-f5fdd594b4d9241dab3f.js.map"
+    ],
+    "path---comfort-and-stagnation": [
+      "path---comfort-and-stagnation-b5d55b56c23be78b32be.js",
+      "path---comfort-and-stagnation-b5d55b56c23be78b32be.js.map"
+    ],
+    "path---broken-britain": [
+      "path---broken-britain-fe910dd45dd8d5b6e4d6.js",
+      "path---broken-britain-fe910dd45dd8d5b6e4d6.js.map"
+    ],
+    "path---bransion": [
+      "path---bransion-a442949fd4452d0554d2.js",
+      "path---bransion-a442949fd4452d0554d2.js.map"
+    ],
+    "page-component---node-modules-gatsby-plugin-offline-app-shell-js": [
+      "page-component---node-modules-gatsby-plugin-offline-app-shell-js-4f0dddda43ae15168f16.js",
+      "page-component---node-modules-gatsby-plugin-offline-app-shell-js-4f0dddda43ae15168f16.js.map"
+    ],
+    "app": [
+      "app-f204bc1bc6f8541c43cb.js",
+      "app-f204bc1bc6f8541c43cb.js.map"
+    ]
+  }
+}
