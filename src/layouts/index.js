@@ -15,7 +15,14 @@ const StyledLink = styled(Link)`
   color: white;
 `;
 
-const H1 = styled.h1`font-size: 3em;`;
+const H1 = styled.h1`
+  font-size: 3em;
+  margin-bottom: 0;
+  a {
+    text-decoration: none;
+  }
+`;
+
 const Footer = styled.footer`
   text-align: center;
   border-top: 1px solid rgba(255, 255, 255, 0.5);

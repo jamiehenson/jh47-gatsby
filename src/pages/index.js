@@ -5,13 +5,23 @@ import Helmet from "react-helmet";
 import styled from "styled-components";
 import moment from "moment";
 
+const StyledSubHeader = styled.h2`
+  margin: 15px 0 20px;
+  a {
+    padding-left: 0.5em;
+    font-size: 0.6em;
+    color: white;
+    font-style: italic;
+  }
+`;
+
 const Section = styled.div`
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   background-color: rgba(0, 0, 0, 0.1);
   padding: 10px;
   transition: background-color 0.3s;
   h3 {
-    margin-top: 0;
+    margin: 0 0 10px;
   }
   &.moodlight {
     background-color: rgba(66, 84, 96, 0.5);
@@ -38,12 +48,18 @@ const Section = styled.div`
 const StyledList = styled.ul`
   list-style: none;
   padding: 0;
-  li {
-    padding: 0.5em 0;
-  }
+  margin: 0;
   a {
     color: white;
-    display: block;
+    display: flex;
+    transition: all 0.3s;
+    padding: 10px;
+    margin: 0 -10px;
+    &:hover {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 15px 10px;
+      transition: all 0.3s;
+    }
   }
 `;
 
@@ -90,12 +106,20 @@ class Index extends React.Component {
     super(props);
     this.state = { projectBlurb: "", projectClass: "" };
     this.changeProjectBlurb = this.changeProjectBlurb.bind(this);
+    this.removeProjectBlurb = this.removeProjectBlurb.bind(this);
   }
 
   changeProjectBlurb(e) {
     this.setState({
       projectBlurb: e.target.dataset.description,
       projectClass: e.target.dataset.name
+    });
+  }
+
+  removeProjectBlurb(e) {
+    this.setState({
+      projectBlurb: "",
+      projectClass: ""
     });
   }
 
@@ -121,13 +145,20 @@ class Index extends React.Component {
     });
 
     const subHeader = (
-      <div>
-        <h2>
-          Full stack developer and multi-instrumentalist, based in London. I
-          like Ruby on Rails, React, and many other wondrous web-flavoured
-          things.
-        </h2>
-      </div>
+      <StyledSubHeader>
+        Full stack developer and multi-instrumentalist, based in London. I like{" "}
+        <span style={{ color: "#FFBFBF" }}>Ruby on Rails</span>, {" "}
+        <span style={{ color: "#D9D9FF" }}>React</span>, and many other{" "}
+        <span style={{ color: "#FFBFBF" }}>w</span>
+        <span style={{ color: "#FFDBA6" }}>o</span>
+        <span style={{ color: "#FFFFB2" }}>n</span>
+        <span style={{ color: "#D1FFC2" }}>d</span>
+        <span style={{ color: "#D9D9FF" }}>r</span>
+        <span style={{ color: "#D2BFE0" }}>o</span>
+        <span style={{ color: "#C299C2" }}>u</span>
+        <span style={{ color: "#B2B2B2" }}>s</span> web-flavoured things.
+        <Link to="/about">(read more...)</Link>
+      </StyledSubHeader>
     );
 
     const projects = (
@@ -135,6 +166,7 @@ class Index extends React.Component {
         <ProjectCell
           href="/"
           onMouseEnter={this.changeProjectBlurb}
+          onMouseLeave={this.removeProjectBlurb}
           style={{ "background-color": "rgb(66, 84, 96)" }}
           data-name="moodlight"
           data-description="Style your page based upon the time of day, set time intervals and more!"
@@ -144,6 +176,7 @@ class Index extends React.Component {
         <ProjectCell
           href="/laspring"
           onMouseEnter={this.changeProjectBlurb}
+          onMouseLeave={this.removeProjectBlurb}
           style={{ "background-color": "rgb(0, 174, 152)" }}
           data-name="laspring"
           data-description="An interactive arcade built for the band L.A. Spring using Phaser."
@@ -153,6 +186,7 @@ class Index extends React.Component {
         <ProjectCell
           href="/7-min"
           onMouseEnter={this.changeProjectBlurb}
+          onMouseLeave={this.removeProjectBlurb}
           style={{ "background-color": "rgb(223, 71, 48)" }}
           data-name="7min"
           data-description="A clean, concise, and responsive 7 Minute Workout app."
@@ -162,6 +196,7 @@ class Index extends React.Component {
         <ProjectCell
           href="/snippet"
           onMouseEnter={this.changeProjectBlurb}
+          onMouseLeave={this.removeProjectBlurb}
           style={{ "background-color": "rgb(14, 78, 173)" }}
           data-name="snippet"
           data-description="An easy way to glam up your truncated comments/reviews/whatever!"
@@ -171,6 +206,7 @@ class Index extends React.Component {
         <ProjectCell
           href="/bond"
           onMouseEnter={this.changeProjectBlurb}
+          onMouseLeave={this.removeProjectBlurb}
           style={{ "background-color": "rgb(209, 160, 84)" }}
           data-name="bond"
           data-description="A 6 person drinking game with a sophisticated twist and a license to thrill."
