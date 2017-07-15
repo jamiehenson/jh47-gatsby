@@ -1,8 +1,6 @@
 ---
 title: Sisqo's Thong Song - a study into human nature
 date: 2015-05-01 22:12:03
-layout: post
-readNext: "/broken-britain/"
 path: "/thong-song/"
 author: Jamie Henson
 ---

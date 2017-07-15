@@ -1,7 +1,6 @@
 ---
 title: London vs San Francisco - back and forth
 date: 2016-03-01 09:56:03
-layout: post
 author: Jamie Henson
 path: "/london-vs-sf/"
 ---

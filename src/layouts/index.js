@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Link from "gatsby-link";
 import { Container } from "react-responsive-grid";
 import styled from "styled-components";
@@ -27,6 +28,7 @@ const StyledLink = styled(Link)`
 const H1 = styled.h1`
   font-size: 3em;
   margin-bottom: 0;
+  text-shadow: 0 0 4px black;
   a {
     text-decoration: none;
   }
@@ -60,7 +62,7 @@ class Template extends React.Component {
       );
     } else {
       header = (
-        <h2>
+        <h2 style={{ "text-shadow": "0 0 3px black" }}>
           <StyledLink to={"/"}>Jamie Henson</StyledLink>
         </h2>
       );
@@ -93,9 +95,9 @@ class Template extends React.Component {
 }
 
 Template.propTypes = {
-  children: React.PropTypes.function,
-  location: React.PropTypes.object,
-  route: React.PropTypes.object
+  children: PropTypes.func.isRequired,
+  location: PropTypes.object,
+  route: PropTypes.object
 };
 
 export default Template;

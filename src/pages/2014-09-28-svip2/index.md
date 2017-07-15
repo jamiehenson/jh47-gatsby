@@ -1,7 +1,6 @@
 ---
 title: 'Enter: The Bransion'
 date: 2014-09-28 13:52:13
-layout: post
 author: Jamie Henson
 path: "/bransion/"
 ---

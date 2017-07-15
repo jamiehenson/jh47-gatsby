@@ -1,8 +1,6 @@
 ---
 title: (Maybe) Halfway
 date: 2015-02-28 16:50:00
-tags:
-layout: post
 author: Jamie Henson
 path: "/halfway/"
 ---

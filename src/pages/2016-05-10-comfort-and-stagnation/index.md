@@ -1,7 +1,6 @@
 ---
 title: Comfort and stagnation, a fine line
 date: 2016-05-10 10:00:42
-layout: post
 author: Jamie Henson
 path: "/comfort-and-stagnation/"
 ---

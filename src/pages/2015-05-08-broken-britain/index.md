@@ -1,7 +1,6 @@
 ---
 title: The UK is turning into the US. And it shouldn't be.
 date: 2015-05-08 13:45:20
-layout: post
 author: Jamie Henson
 path: "/broken-britain/"
 ---

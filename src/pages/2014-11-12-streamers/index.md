@@ -1,7 +1,6 @@
 ---
 title: Streamer Wars (Spotify, Google and Rdio)
 date: 2014-11-12 15:12:17
-layout: post
 author: Jamie Henson
 path: "/streamers/"
 ---

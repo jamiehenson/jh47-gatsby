@@ -1,47 +1,43 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Link from "gatsby-link";
 import get from "lodash/get";
 import Helmet from "react-helmet";
 import styled from "styled-components";
-import moment from "moment";
 
 const StyledSubHeader = styled.h2`
   margin: 15px 0 20px;
-  a {
-    padding-left: 0.5em;
-    font-size: 0.6em;
-    color: white;
-    font-style: italic;
-  }
+  text-shadow: 0 0 3px black;
 `;
 
 const Section = styled.div`
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   background-color: rgba(0, 0, 0, 0.1);
   padding: 10px;
-  transition: background-color 0.3s;
+  transition: all 0.3s;
   h3 {
     margin: 0 0 10px;
+    text-shadow: 0 0 3px black;
   }
   &.moodlight {
     background-color: rgba(66, 84, 96, 0.5);
-    transition: background-color 0.3s;
+    transition: all 0.3s;
   }
   &.laspring {
     background-color: rgba(0, 174, 152, 0.5);
-    transition: background-color 0.3s;
+    transition: all 0.3s;
   }
-  &.7min {
+  &.sevenmin {
     background-color: rgba(223, 71, 48, 0.5);
-    transition: background-color 0.3s;
+    transition: all 0.3s;
   }
   &.snippet {
     background-color: rgba(14, 78, 173, 0.5);
-    transition: background-color 0.3s;
+    transition: all 0.3s;
   }
   &.bond {
     background-color: rgba(209, 160, 84, 0.5);
-    transition: background-color 0.3s;
+    transition: all 0.3s;
   }
 `;
 
@@ -78,7 +74,7 @@ const ProjectWrapper = styled.div`
 `;
 
 const ProjectCell = styled.a`
-  background: rgba(0, 0, 0, 0.5);
+  backgroundColor: rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -134,13 +130,13 @@ class Index extends React.Component {
       if (post.node.path !== "/404/") {
         const title = get(post, "node.frontmatter.title") || post.node.path;
         pageLinks.push(
-          <li key={post.node.path}>
+          <li key={post.node.frontmatter.path}>
             <Link to={post.node.frontmatter.path} style={{ display: "flex" }}>
               <span style={{ flex: 1 }}>
                 {post.node.frontmatter.title}
               </span>
-              <span style={{ width: "200px", "text-align": "right" }}>
-                {moment(post.node.frontmatter.date).format("MMMM Do YYYY")}
+              <span style={{ width: "200px", textAlign: "right" }}>
+                {post.node.frontmatter.date}
               </span>
             </Link>
           </li>
@@ -170,7 +166,7 @@ class Index extends React.Component {
           href="/"
           onMouseEnter={this.changeProjectBlurb}
           onMouseLeave={this.removeProjectBlurb}
-          style={{ "background-color": "rgb(66, 84, 96)" }}
+          style={{ backgroundColor: "rgb(66, 84, 96)" }}
           data-name="moodlight"
           data-description="Style your page based upon the time of day, set time intervals and more!"
         >
@@ -180,7 +176,7 @@ class Index extends React.Component {
           href="/laspring"
           onMouseEnter={this.changeProjectBlurb}
           onMouseLeave={this.removeProjectBlurb}
-          style={{ "background-color": "rgb(0, 174, 152)" }}
+          style={{ backgroundColor: "rgb(0, 174, 152)" }}
           data-name="laspring"
           data-description="An interactive arcade built for the band L.A. Spring using Phaser."
         >
@@ -190,8 +186,8 @@ class Index extends React.Component {
           href="/7-min"
           onMouseEnter={this.changeProjectBlurb}
           onMouseLeave={this.removeProjectBlurb}
-          style={{ "background-color": "rgb(223, 71, 48)" }}
-          data-name="7min"
+          style={{ backgroundColor: "rgb(223, 71, 48)" }}
+          data-name="sevenmin"
           data-description="A clean, concise, and responsive 7 Minute Workout app."
         >
           7 Minute Workout{" "}
@@ -200,7 +196,7 @@ class Index extends React.Component {
           href="/snippet"
           onMouseEnter={this.changeProjectBlurb}
           onMouseLeave={this.removeProjectBlurb}
-          style={{ "background-color": "rgb(14, 78, 173)" }}
+          style={{ backgroundColor: "rgb(14, 78, 173)" }}
           data-name="snippet"
           data-description="An easy way to glam up your truncated comments/reviews/whatever!"
         >
@@ -210,7 +206,7 @@ class Index extends React.Component {
           href="/bond"
           onMouseEnter={this.changeProjectBlurb}
           onMouseLeave={this.removeProjectBlurb}
-          style={{ "background-color": "rgb(209, 160, 84)" }}
+          style={{ backgroundColor: "rgb(209, 160, 84)" }}
           data-name="bond"
           data-description="A 6 person drinking game with a sophisticated twist and a license to thrill."
         >
@@ -242,7 +238,7 @@ class Index extends React.Component {
 }
 
 Index.propTypes = {
-  route: React.PropTypes.object
+  route: PropTypes.object
 };
 
 export default Index;
@@ -260,7 +256,7 @@ export const pageQuery = graphql`
           frontmatter {
             path
             title
-            date
+            date(formatString: "MMMM Do YYYY")
           }
         }
       }

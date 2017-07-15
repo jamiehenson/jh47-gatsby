@@ -1,7 +1,6 @@
 ---
 title: Land of the free
 date: 2014-09-04 23:08:31
-layout: post
 author: Jamie Henson
 path: "/land-of-the-free/"
 ---

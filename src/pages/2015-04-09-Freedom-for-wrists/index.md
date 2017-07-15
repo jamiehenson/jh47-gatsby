@@ -1,7 +1,6 @@
 ---
 title: Freedom for Wrists
 date: 2015-04-09 02:18:32
-layout: post
 author: Jamie Henson
 path: "/freedom-for-wrists/"
 ---

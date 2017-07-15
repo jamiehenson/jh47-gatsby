@@ -3,12 +3,15 @@ import Helmet from "react-helmet";
 import Link from "gatsby-link";
 import get from "lodash/get";
 import styled from "styled-components";
-import moment from "moment";
 
 const PostHead = styled.div`
   margin: 0 0 10px;
   h1 {
     margin-bottom: 5px;
+  }
+  h1,
+  strong {
+    text-shadow: 0 0 3px black;
   }
 `;
 
@@ -35,7 +38,7 @@ class BlogPostTemplate extends React.Component {
             {post.frontmatter.title}
           </h1>
           <strong>
-            {moment(post.frontmatter.date).format("MMMM Do YYYY")}
+            {post.frontmatter.date}
           </strong>
         </PostHead>
         <PostBody dangerouslySetInnerHTML={{ __html: post.html }} />
@@ -59,7 +62,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date
+        date(formatString: "MMMM Do YYYY")
       }
     }
   }

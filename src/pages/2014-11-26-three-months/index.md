@@ -1,7 +1,6 @@
 ---
 title: Three months in SF - but there's always room for Bristol
 date: 2014-11-26 18:17:56
-layout: post
 author: Jamie Henson
 path: "/three-months/"
 ---
