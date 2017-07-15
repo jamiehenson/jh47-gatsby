@@ -46,7 +46,7 @@ class Template extends React.Component {
   render() {
     const { location, children } = this.props;
     let header;
-    if (location.pathname === "/") {
+    if (location.pathname === "/" || location.pathname === "/jh47-gatsby/") {
       header = (
         <H1>
           <StyledLink to={"/"}>Jamie Henson</StyledLink>
