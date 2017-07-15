@@ -183,7 +183,7 @@ class Index extends React.Component {
           L.A. Spring{" "}
         </ProjectCell>
         <ProjectCell
-          href="/7-min"
+          href="/7min"
           onMouseEnter={this.changeProjectBlurb}
           onMouseLeave={this.removeProjectBlurb}
           style={{ backgroundColor: "rgb(223, 71, 48)" }}
