@@ -78,7 +78,6 @@ const ProjectWrapper = styled.div`
 `;
 
 const ProjectCell = styled.a`
-  height: 100px;
   background: rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
@@ -94,10 +93,15 @@ const ProjectCell = styled.a`
   font-weight: bold;
   font-size: 20px;
   border: 1px solid rgba(255, 255, 255, 0.5);
+  width: 100%;
   &:hover {
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.25);
     transform: scale(1.03);
     transition: all 0.3s;
+  }
+  @media (min-width: 768px) {
+    height: 100px;
+    width: auto;
   }
 `;
 
@@ -157,7 +161,6 @@ class Index extends React.Component {
         <span style={{ color: "#D2BFE0" }}>o</span>
         <span style={{ color: "#C299C2" }}>u</span>
         <span style={{ color: "#B2B2B2" }}>s</span> web-flavoured things.
-        <Link to="/about">(read more...)</Link>
       </StyledSubHeader>
     );
 

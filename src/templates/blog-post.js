@@ -3,8 +3,24 @@ import Helmet from "react-helmet";
 import Link from "gatsby-link";
 import get from "lodash/get";
 import styled from "styled-components";
+import moment from "moment";
 
-const StyledBody = styled.div`line-height: 1.4;`;
+const PostHead = styled.div`
+  margin: 0 0 10px;
+  h1 {
+    margin-bottom: 5px;
+  }
+`;
+
+const PostBody = styled.div`
+  font-family: "Cabin";
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  font-size: 18px;
+  line-height: 1.6;
+  a {
+    color: white;
+  }
+`;
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -14,13 +30,15 @@ class BlogPostTemplate extends React.Component {
     return (
       <div>
         <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
-        <h1>
-          {post.frontmatter.title}
-        </h1>
-        <p>
-          {post.frontmatter.date}
-        </p>
-        <StyledBody dangerouslySetInnerHTML={{ __html: post.html }} />
+        <PostHead>
+          <h1>
+            {post.frontmatter.title}
+          </h1>
+          <strong>
+            {moment(post.frontmatter.date).format("MMMM Do YYYY")}
+          </strong>
+        </PostHead>
+        <PostBody dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
     );
   }

@@ -28,9 +28,9 @@ As a counterpoint, one can conclude that Sisqo has no long term motivation and t
 On an ending note, Thong Song has different meaning depending on the personal beliefs and aspirations of the listener. One can either objectively take Sisqo’s account for an individual expression of organic, raw desire, purely from the perspective of the narrator - or they can use Thong Song as a conduit for their own feelings, and extrapolate its message onto their own lives. Either way, this work was undeniably a potent endnote in the millenium it played a part in concluding.
 &nbsp;
 ***
-&nbsp;*References:
+&nbsp;References:
 1) Morales, E. M. (1999). Ricky Martin. Columbia Records.
 2) Mill, J. S. (1865). Principles of political economy: with some of their applications to social philosophy (Vol. 2). Longmans, Green.
 3) Moore, G. E. (1903). Principia Ethica.
 4) Kant, I. (1790). Critique of judgement.
-5) Hume, D. (1738). A treatise of human nature.*
+5) Hume, D. (1738). A treatise of human nature.

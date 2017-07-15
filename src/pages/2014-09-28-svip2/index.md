@@ -21,5 +21,3 @@ Moving to the present, work is still tough but it's a learning process. With eve
 To sum up, it has been an incredible month so far. All of us on the SVIP have built ourselves a platform on which to move forward and encounter new things - it's rather exciting indeed to consider what things they might be.
 
 Also, I finally bought a guitar, which means that all of my essential home comforts are now fulfilled.
-
-![View](http://jh47.com/img/view.jpg)

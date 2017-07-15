@@ -7,6 +7,15 @@ import "typeface-cabin";
 import "font-awesome/css/font-awesome.css";
 import FontAwesome from "react-fontawesome";
 
+const AppContainer = styled.div`
+  background: rgb(91, 94, 166);
+  color: white;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+`;
+
 const StyledContainer = styled(Container)`
   font-family: "Arvo", sans-serif;
 `;
@@ -51,9 +60,9 @@ class Template extends React.Component {
       );
     } else {
       header = (
-        <h3>
+        <h2>
           <StyledLink to={"/"}>Jamie Henson</StyledLink>
-        </h3>
+        </h2>
       );
     }
 
@@ -65,18 +74,20 @@ class Template extends React.Component {
         <a href="//twitter.com/HensonJamie" target="_blank">
           <FontAwesome name="twitter" size="3x" />
         </a>
-        <a href="//instagram.com/jhenson47" target="_blank">
-          <FontAwesome name="instagram" size="3x" />
+        <a href="//linkedin.com/in/jamiehenson" target="_blank">
+          <FontAwesome name="linkedin" size="3x" />
         </a>
       </Footer>
     );
 
     return (
-      <StyledContainer>
-        {header}
-        {children()}
-        {footer}
-      </StyledContainer>
+      <AppContainer>
+        <StyledContainer>
+          {header}
+          {children()}
+          {footer}
+        </StyledContainer>
+      </AppContainer>
     );
   }
 }

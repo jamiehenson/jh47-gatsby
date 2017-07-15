@@ -13,11 +13,6 @@ if (process.env.NODE_ENV === `production`) {
 
 export default class HTML extends React.Component {
   render() {
-    const StyledBody = styled.body`
-      background: rgb(91, 94, 166);
-      color: white;
-    `;
-
     const head = Helmet.rewind();
     let css;
     if (process.env.NODE_ENV === `production`) {
@@ -41,13 +36,13 @@ export default class HTML extends React.Component {
           {this.props.headComponents}
           {css}
         </head>
-        <StyledBody>
+        <body>
           <div
             id="___gatsby"
             dangerouslySetInnerHTML={{ __html: this.props.body }}
           />
           {this.props.postBodyComponents}
-        </StyledBody>
+        </body>
       </html>
     );
   }
