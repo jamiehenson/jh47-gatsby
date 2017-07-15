@@ -142,7 +142,7 @@ class Index extends React.Component {
           Moodlight.js
         </ProjectCell>
         <ProjectCell
-          href="//laspring.github.io"
+          href="/laspring"
           onMouseEnter={this.changeProjectBlurb}
           style={{ "background-color": "rgb(0, 174, 152)" }}
           data-name="laspring"
