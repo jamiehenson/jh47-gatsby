@@ -94,7 +94,7 @@ class Postlist extends React.Component {
       "rgb(51, 174, 162)",
       "rgb(239, 184, 70)",
       "rgb(78, 80, 153)"
-    ].sort(Math.random() - 0.5);
+    ];
 
     this.props.queryResults.forEach((post, index) => {
       if (post.node.path !== "/404/") {
